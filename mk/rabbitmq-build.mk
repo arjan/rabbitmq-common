@@ -53,8 +53,8 @@ LAGER_EXTRA_SINKS += rabbit_log \
 		     rabbit_log_upgrade
 lager_extra_sinks = $(subst $(space),$(comma),$(LAGER_EXTRA_SINKS))
 
-RMQ_ERLC_OPTS += +'{parse_transform,lager_transform}' \
-		 +'{lager_extra_sinks,[$(lager_extra_sinks)]}'
+#RMQ_ERLC_OPTS += +'{parse_transform,lager_transform}' \
+#		 +'{lager_extra_sinks,[$(lager_extra_sinks)]}'
 
 # Push our compilation options to both the normal and test ERLC_OPTS.
 ERLC_OPTS += $(RMQ_ERLC_OPTS)
